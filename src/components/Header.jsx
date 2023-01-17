@@ -25,8 +25,12 @@ export default function Header() {
       </button>
       <ul className="menu-wrap">
         {menu.map((item, index) => (
-          <div className="menu-item" onClick={() => console.log(item)}>
-            <li key={index}>{item.menuName}</li>
+          <div
+            key={index}
+            className="menu-item"
+            onClick={() => console.log(item)}
+          >
+            <li>{item.menuName}</li>
             {item.isActive && <div className="active-line" />}
           </div>
         ))}
