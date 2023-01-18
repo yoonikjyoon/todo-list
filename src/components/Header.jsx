@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../App.css";
 import { BsSun, BsFillSunFill } from "react-icons/bs";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export default function Header() {
   const [menu, setMenu] = useState([
@@ -17,11 +18,11 @@ export default function Header() {
       isActive: false,
     },
   ]);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
     <div className="header-wrap">
-      <button onClick={() => setIsDarkMode((prev) => !prev)}>
-        {isDarkMode ? <BsFillSunFill /> : <BsSun />}
+      <button onClick={() => toggleDarkMode()}>
+        {darkMode ? <BsFillSunFill /> : <BsSun />}
       </button>
       <ul className="menu-wrap">
         {menu.map((item, index) => (

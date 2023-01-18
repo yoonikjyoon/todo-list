@@ -10,18 +10,22 @@ export default function Main() {
   ]);
   return (
     <div className="main-wrap">
-      {list.map((item) => (
-        <div className="todo-list-wrap" key={item.id}>
-          <div className="checkbox-wrap">
-            <input type="checkbox" id={item.id} />
-            <label htmlFor={item.id}></label>
+      {list.length > 0 ? (
+        list.map((item) => (
+          <div className="todo-list-wrap" key={item.id}>
+            <div className="checkbox-wrap">
+              <input type="checkbox" id={item.id} />
+              <label htmlFor={item.id}></label>
+            </div>
+            {item.todo}
+            <div className="trash-wrap">
+              <FaTrashAlt color="white" size="0.8rem" />
+            </div>
           </div>
-          {item.todo}
-          <div className="trash-wrap">
-            <FaTrashAlt color="white" size="0.8rem" />
-          </div>
-        </div>
-      ))}
+        ))
+      ) : (
+        <div>등록된 항목이 없습니다</div>
+      )}
     </div>
   );
 }

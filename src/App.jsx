@@ -1,17 +1,18 @@
-import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import Container from "./components/Container";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 function App() {
   return (
-    <div className="container">
-      <div className="app-wrap">
+    <DarkModeProvider>
+      <Container>
         <Header />
         <Main />
         <Footer />
-      </div>
-    </div>
+      </Container>
+    </DarkModeProvider>
   );
 }
 
