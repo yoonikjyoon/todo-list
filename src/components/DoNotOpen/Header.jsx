@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import "../App.css";
+import "../../App.css";
 import { BsSun, BsFillSunFill } from "react-icons/bs";
-import { DarkModeContext } from "../context/DarkModeContext";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 export default function Header() {
   const [menu, setMenu] = useState([
