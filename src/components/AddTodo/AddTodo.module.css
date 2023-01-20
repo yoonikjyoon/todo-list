@@ -1,0 +1,27 @@
+.form {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  background-color: var(--color-bg);
+  border-top: 2px solid var(--color-purple);
+}
+.input {
+  flex: 1 0 auto;
+  font-size: 1.1rem;
+  padding: 0.7rem 1rem;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+.button {
+  cursor: pointer;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+.button:hover {
+  filter: brightness(125%);
+}

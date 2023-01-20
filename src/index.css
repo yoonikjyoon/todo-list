@@ -6,17 +6,31 @@
   padding: 0;
 }
 :root {
-  --color-bg-dark: rgb(48, 36, 69);
+  --color-bg-dark: rgb(73, 58, 105);
   --color-bg: rgb(232, 226, 243);
-  --color-grey: plum;
+  --color-purple: rgba(127, 108, 190, 0.45);
+  --color-menu-text: rgb(128 115 150);
   --color-text: #22243b;
   --color-accent: plum;
+  --color-white: white;
+  --color-scrollbar: rgba(74, 68, 96, 0.45);
+}
+html.dark {
+  --color-bg-dark: rgb(73, 58, 105);
+  --color-bg: rgb(62, 60, 66);
+  --color-purple: rgba(164, 139, 246, 0.45);
+  --color-menu-text: rgb(245, 238, 255);
+  --color-text: #c6cbff;
+  --color-accent: rgb(88, 66, 88);
+  --color-white: white;
+  --color-scrollbar: rgba(74, 68, 96, 0.45);
 }
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
@@ -25,19 +39,19 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(232, 226, 243);
+  accent-color: var(--color-accent);
 }
 #root {
   width: 100%;
   height: 60%;
   max-width: 500px;
   background-color: var(--color-bg);
-  border: 1px solid var(--color-accent);
   overflow: hidden;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 5px 5px 21px 4px rgba(0, 0, 0, 0.45);
-  box-shadow: 5px 5px 21px 4px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 5px 5px 21px 4px rgba(140, 124, 222, 0.45);
+  box-shadow: 5px 5px 21px 4px rgba(140, 124, 222, 0.45);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -69,4 +83,16 @@ input:focus {
 }
 .react-icons {
   vertical-align: middle;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-purple);
 }

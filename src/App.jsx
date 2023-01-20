@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 // import { TodoListProvider } from "./context/TodoListContext";
 import TodoList from "./components/TodoList/TodoList";
 import { useState } from "react";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 const filters = ["all", "active", "completed"];
 function App() {
@@ -21,8 +22,10 @@ function App() {
     //   </Container>
     // </DarkModeProvider>
     <>
-      <Header filters={filters} filter={filter} onFilterChange={setFilter} />
-      <TodoList filter={filter} />
+      <DarkModeProvider>
+        <Header filters={filters} filter={filter} onFilterChange={setFilter} />
+        <TodoList filter={filter} />
+      </DarkModeProvider>
     </>
   );
 }
