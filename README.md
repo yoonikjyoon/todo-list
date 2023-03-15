@@ -24,5 +24,6 @@ Click to check out 👉 (https://yooni-todo.netlify.app/)
 ## 🫧 Things for improvement 🫧 
 - [ ] Make the UI more customizable for the users (color, add images, categorizing...)
 - [ ] Add Log in / Log out
-- [ ] Able to create a time limit
+- [ ] Enable to create a time limit
 - [ ] Add a calender view to enable users to see their tasks annually, monthly and weekly
+- [ ] Enable to add notes to the detail
